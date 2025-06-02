@@ -1,5 +1,6 @@
 package com.example.E_commerce.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,4 +19,9 @@ public class Product {
     private int id;
     private String name;
     private float price;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    @JsonIgnore
+    Category category;
 }
