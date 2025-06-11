@@ -89,4 +89,4 @@ Includes:
 
 1. Clone the repository  
 ```bash
-git clone https://github.com/your-username/ecommerce-api.git
+git clone https://github.com/BasmaMounir/SimpleEcommerce-API.git
