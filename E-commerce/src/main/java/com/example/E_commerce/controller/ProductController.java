@@ -20,7 +20,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public ResponseEntity<ApiResponse> addProduct(@RequestBody ProductDto productDto){
         Product product = productService.addProduct(productDto);
         return ResponseEntity.ok(new ApiResponse("Success",product));

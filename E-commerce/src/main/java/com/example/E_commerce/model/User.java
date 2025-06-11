@@ -30,6 +30,8 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private Role role;
 
+    @OneToOne(mappedBy = "user",fetch = FetchType.EAGER , cascade = CascadeType.ALL)
+    private Cart cart;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
